@@ -3630,28 +3630,3 @@ w3","Password":"","JobId":5,"EMail":"worker3@gmail.com","ManagerId":21},{"Id":25
 ,"Name":"Worker4","UserName":"ww4","Password":"","JobId":3,"EMail":"worker4@gmai
 l.com","ManagerId":21}]* Connection #0 to host localhost left intact
 ```
-
-
-## WinForms + Angular
-### Home page
-![picture](step2.png)
-![picture](step2.1.png)   
-### Manager page
-![picture](step3.png)   
-![picture](step4.png) 
-![picture](step4.1.png)  
-![picture](step4.2.png)  
-![picture](step4.3.png)  
-![picture](step4.4.png)  
-![picture](step4.5.png)  
-### Team-leader page
-![picture](step5.png)   
-![picture](step6.png)  
-![picture](step7.png) 
-### Worker page
-![picture](step12.png) 
-![picture](step10.png) 
-![picture](step13.png)
-
-
-
