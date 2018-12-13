@@ -7,8 +7,6 @@
 * Angular
 * php
 
-## System diagram:
-![picture](step1.png)
 
 ***
 ## Web api
@@ -223,9 +221,7 @@ namespace BOL
         public int Id { get; set; }
 
         //required
-        //Foreign key from 'Workers' table
         [Required]
-        [ForeignKey("Workers")]
         public int WorkerId { get; set; }
 
         //required
@@ -254,9 +250,7 @@ namespace BOL
         public int Id { get; set; }
 
         //required
-        //Foreign key from 'Workers' table
         [Required]
-        [ForeignKey("Workers")]
         public int WorkerId { get; set; }
 
         //required
@@ -282,7 +276,6 @@ namespace BOL
 
 ```
 ```csharp
-//using BOL.Help.Validations;
 using BOL.Validations;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -299,10 +292,8 @@ namespace BOL
         
         //required
         //3 - 20 chars
-        //unique
         [Required]
         [MinLength(3), MaxLength(20)]
-        //[Unique]
         public string Name { get; set; }
 
         //required
@@ -670,7 +661,6 @@ namespace BLL
             return DBAccess.RunNonQuery(query) == 1;
         }
 
-        //למחוק הערה אחרי השאילתה
         //GetHoursStatusToWorker - Get workerId, Return his hoursStatus
         public static List<HoursStatusW> GetHoursStatusToWorker(int workerId)
         {
@@ -688,7 +678,6 @@ namespace BLL
 
             Func<MySqlDataReader, List<HoursStatusW>> func = (reader) =>
             {
-                //לבדוק שאין בעיה אם ההמרות וכדומה
                 List<HoursStatusW> hoursStatus = new List<HoursStatusW>();
                 HoursStatusW hoursStatusW;
                 while (reader.Read())
